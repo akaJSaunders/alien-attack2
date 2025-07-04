@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://gh6t2kb6rapw"]
+
+[ext_resource type="FontFile" uid="uid://f1dc8s5fxfv2" path="res://assets/font/Kenney Blocks.ttf" id="1_ahhtf"]
+[ext_resource type="Script" uid="uid://0ww6te1m11tj" path="res://scripts/hud.gd" id="1_oo0fn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_oo0fn"]
+font = ExtResource("1_ahhtf")
+font_size = 48
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oo0fn")
+
+[node name="Score" type="Label" parent="."]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 18.0
+offset_right = 379.0
+offset_bottom = 90.0
+text = "Score: 9999"
+label_settings = SubResource("LabelSettings_oo0fn")

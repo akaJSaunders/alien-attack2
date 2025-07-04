@@ -16,6 +16,8 @@ radius = 43.3333
 [node name="Enemy" type="Area2D"]
 rotation = 4.71239
 scale = Vector2(0.2, 0.2)
+collision_layer = 2
+collision_mask = 13
 script = ExtResource("1_md0e3")
 speed = 150
 
@@ -35,6 +37,4 @@ shape = SubResource("CircleShape2D_md0e3")
 position = Vector2(-143.333, 50)
 shape = SubResource("CircleShape2D_4ra3w")
 
-[node name="VisibleNotifier" type="VisibleOnScreenNotifier2D" parent="."]
-
-[connection signal="screen_exited" from="VisibleNotifier" to="." method="_on_visible_notifier_screen_exited"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
